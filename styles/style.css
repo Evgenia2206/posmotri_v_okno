@@ -44,28 +44,25 @@ ol {
   block-size: 100%;
   padding: 133px 30px;
   column-gap: 30px;
-  align-items: end;
 }
 
 .result {
   display: flex;
   inline-size: 711px;
-  block-size: 100%;
+  padding-block-start: 78px;
   flex-direction: column;
-  justify-content: end;
 }
 
 .result__video-container {
   display: flex;
   position: relative;
   inline-size: 100%;
-  min-block-size: 386px;
-  padding-block-end: 16px;
+  block-size: 386px;
 }
 
 .result__video { 
   inline-size: 100%;
-  block-size: 100%;
+  min-block-size: 100%;
   object-fit: cover;
   object-position: center;
 }
@@ -73,8 +70,10 @@ ol {
 .search-form { 
   display: flex;
   inline-size: 100%;
+  block-size: 100%;
   justify-content: space-between;
   align-items: end;
+  padding-block-start: 16px;
 }
 
 .content__details {
@@ -84,12 +83,9 @@ ol {
 }
 
 .content__list { 
-  block-size: 298px;
+  min-block-size: 298px;
   position: relative;
-  overflow-x: hidden;
   overflow-y: scroll;
-  scrollbar-width: none;
-  margin-block-start: 26px;
 }
 
 .content__list-item:not(:last-of-type) {
@@ -110,9 +106,12 @@ ol {
 
 .content__video-card-description-container { 
   flex-grow: 1;
+  flex-basis: 0;
+  overflow: hidden;
 }
 
 .search-form__fieldset-title { 
+  font-family: inherit;
   font-size: 18px;
   font-weight: 400;
 }
@@ -121,7 +120,7 @@ ol {
   appearance: none;
   font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
-  color: rgba(255, 255, 255, 0.7);
+  color: rgb(255 255 255 / 0.7);
   background-color: #1b1919;
   border: none;
   border-block-start: 1px solid #FFFFFF;
@@ -135,6 +134,7 @@ ol {
   font-weight: 700;
   text-transform: uppercase;
   line-height: 94%;
+  margin-block-end: 26px;
 }
 
 .content__accent { 
@@ -144,7 +144,8 @@ ol {
 .content__card-link { 
   display: block;
   text-decoration: none;
-  color: #fff;
+  color: #ffffff;
+  margin: 2px;
 }
 
 .content__video-card-title { 
@@ -152,9 +153,12 @@ ol {
   font-size: 30px;
   font-weight: 700;
   text-transform: uppercase;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .content__video-card-description {
+  font-family: inherit;
   line-height: 16.2px;
 }
 
